@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: baycode-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://baycode-user:BayCode2024!@cluster0.u7vzukt.mongodb.net/baycode?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: emi.is.awesome
+      - key: PORT
+        value: 5000
